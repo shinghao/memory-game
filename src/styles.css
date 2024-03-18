@@ -1,0 +1,62 @@
+body,
+* {
+  font-family: sans-serif;
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 95vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 8px;
+  gap: 8px;
+  width: min(90vw, 400px);
+  min-width: 200px;
+  margin: 0 auto;
+}
+
+.board-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 6px;
+  font-size: min(9vw, 40px);
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+}
+
+.board-cell:disabled {
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: default;
+}
+
+.reset-button {
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: darkcyan;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+}
+
+.win-message {
+  font-size: 10vw;
+}
